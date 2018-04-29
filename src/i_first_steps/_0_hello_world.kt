@@ -2,6 +2,7 @@ package i_first_steps
 
 import kotlinx.coroutines.experimental.delay
 import kotlinx.coroutines.experimental.launch
+import kotlinx.coroutines.experimental.runBlocking
 
 fun main(args: Array<String>) {
     println("Start")
@@ -11,6 +12,8 @@ fun main(args: Array<String>) {
         println("Hello")
     }
 
-    Thread.sleep(2000)
+    runBlocking {
+        delay(2000)
+    }
     println("Stop")
 }
