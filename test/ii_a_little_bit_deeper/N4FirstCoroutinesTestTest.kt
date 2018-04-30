@@ -7,12 +7,12 @@ import kotlin.system.measureTimeMillis
 
 class N4FirstCoroutinesTestTest {
     @Test fun testReturnValue() = runBlocking {
-        assertEquals("Done!", justDelay500())
+        assertEquals("Done!", _4_justDelay500())
     }
 
     @Test fun testDelayNoLessThan500ms() = runBlocking {
         val delay = measureTimeMillis {
-            justDelay500()
+            _4_justDelay500()
         }
 
         assertTrue(delay > 500)
