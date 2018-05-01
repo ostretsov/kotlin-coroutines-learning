@@ -3,16 +3,17 @@ package ii_a_little_bit_deeper
 import kotlinx.coroutines.experimental.Job
 import kotlinx.coroutines.experimental.delay
 import kotlinx.coroutines.experimental.launch
+import Logger
 
-suspend fun _n6_cancelling_corourine() {
+suspend fun _n6_cancelling_corourine(logger: Logger) {
     val job: Job = launch {
         repeat(1000) {
             delay(500)
-            println(".")
+            logger.log(".\n")
         }
     }
 
     delay(1300)
     job.cancel()
-    println("Job cancelled!")
+    logger.log("Job cancelled!\n")
 }
