@@ -1,20 +1,16 @@
 package ii_a_little_bit_deeper
 
 import StringBufferLogger
-import junit.framework.Assert.assertEquals
+import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.experimental.runBlocking
 import org.junit.Test
 
 class N6CancellingCoroutineExecutionTest {
-    @Test fun testJobCancellation() = runBlocking {
-        val logger = StringBufferLogger()
+    var logger = StringBufferLogger()
 
+    @Test fun testJobCancellation() = runBlocking {
         _n6_cancelling_corourine(logger)
 
-        val expected = """.
-.
-Job cancelled!
-"""
-        assertEquals(expected, logger.buffer.toString())
+        assertEquals("..Job cancelled!", logger.buffer.toString())
     }
 }

@@ -1,5 +1,6 @@
 interface Logger {
     fun log(message: String): Unit
+
 }
 
 class ConsoleLogger : Logger {

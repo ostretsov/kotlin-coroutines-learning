@@ -9,11 +9,11 @@ suspend fun _n6_cancelling_corourine(logger: Logger) {
     val job: Job = launch {
         repeat(1000) {
             delay(500)
-            logger.log(".\n")
+            logger.log(".")
         }
     }
 
     delay(1300)
     job.cancel()
-    logger.log("Job cancelled!\n")
+    logger.log("Job cancelled!")
 }
