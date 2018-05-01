@@ -8,6 +8,7 @@ import org.junit.Test
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 
+// mock log functionality in next test
 class N6CancellingCoroutineExecutionTest {
     val out: ByteArrayOutputStream = ByteArrayOutputStream()
 
