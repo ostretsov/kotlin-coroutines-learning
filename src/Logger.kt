@@ -1,10 +1,11 @@
 interface Logger {
     fun log(message: String): Unit
-
+    fun logln(message: String): Unit
 }
 
 class ConsoleLogger : Logger {
-    override fun log(message: String) = System.out.println(message)
+    override fun log(message: String) = System.out.print(message)
+    override fun logln(message: String) = System.out.println(message)
 }
 
 class StringBufferLogger(): Logger {
@@ -12,5 +13,8 @@ class StringBufferLogger(): Logger {
 
     override fun log(message: String) {
         buffer.append(message)
+    }
+    override fun logln(message: String) {
+        buffer.appendln(message)
     }
 }
