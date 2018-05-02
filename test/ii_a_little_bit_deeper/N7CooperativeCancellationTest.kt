@@ -5,7 +5,7 @@ import StringBufferLogger
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.experimental.runBlocking
 
-class N7CooperativeCancellation {
+class N7CooperativeCancellationTest {
     val logger = StringBufferLogger()
 
     @Test fun testCooperativeCancellation() = runBlocking {

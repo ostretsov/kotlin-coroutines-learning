@@ -5,7 +5,7 @@ import org.junit.Test
 import StringBufferLogger
 import junit.framework.TestCase.assertEquals
 
-class N8ClosingResources {
+class N8ClosingResourcesTest {
     @Test
     fun testFinallyKeyword() = runBlocking {
         val logger = StringBufferLogger()

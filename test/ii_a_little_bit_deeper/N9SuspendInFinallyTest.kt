@@ -7,7 +7,7 @@ import junit.framework.TestCase.assertEquals
 import junit.framework.TestCase.assertTrue
 import kotlin.system.measureTimeMillis
 
-class N9SuspendInFinally {
+class N9SuspendInFinallyTest {
     @Test fun testSuspendInFinally() = runBlocking {
         val logger = StringBufferLogger()
 

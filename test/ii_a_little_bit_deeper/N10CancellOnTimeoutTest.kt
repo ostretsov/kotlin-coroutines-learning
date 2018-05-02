@@ -6,7 +6,7 @@ import StringBufferLogger
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.experimental.TimeoutCancellationException
 
-class N10CancellOnTimeout {
+class N10CancellOnTimeoutTest {
     @Test(expected = TimeoutCancellationException::class)
     fun testThrowTimeoutCancellationException() = runBlocking {
         val logger = StringBufferLogger()
