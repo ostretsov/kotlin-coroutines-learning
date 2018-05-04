@@ -15,6 +15,6 @@ class StringBufferLogger(): Logger {
         buffer.append(message)
     }
     override fun logln(message: String) {
-        buffer.appendln(message)
+        buffer.append("${message}\n")
     }
 }
