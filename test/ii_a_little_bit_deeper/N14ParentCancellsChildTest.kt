@@ -5,7 +5,7 @@ import org.junit.Test
 import StringBufferLogger
 import junit.framework.TestCase.assertTrue
 
-class N14ParentCancellsChild {
+class N14ParentCancellsChildTest {
     @Test
     fun testParentCancellsChild() = runBlocking {
         val logger = StringBufferLogger()
