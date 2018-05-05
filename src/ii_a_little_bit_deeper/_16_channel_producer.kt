@@ -7,7 +7,7 @@ import kotlinx.coroutines.experimental.channels.produce
 
 fun _16_producer() = produce<Int> {
     for(x in 1..100) {
-        this.send(x)
+        send(x)
     }
 }
 
